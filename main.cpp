@@ -32,7 +32,7 @@ int main()
 		Shader shader( ( baseDir + "\\kernel.cu" ).c_str(), "kernel.cu", { baseDir }, {}, CompileMode::RelwithDebInfo, isNvidia );
 
 		ShaderArgument args;
-		shader.launch( "kernelMain", args, 1, 1, 1, 1, 32, 1, stream );
+		shader.launch( "kernelMain", args, 1, 1, 1, 32, 1, 1, stream );
 
 		oroStreamSynchronize( stream );
 	}
